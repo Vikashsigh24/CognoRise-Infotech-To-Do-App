@@ -1,0 +1,173 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS';
+    overflow-x: hidden;
+
+}
+
+img {
+    height: 30px;
+    width: 30px;
+}
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #124e66;
+}
+
+.card {
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 0 auto ;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    user-select: none;
+    box-shadow: 0px 4px 16px 8px rgba(0,0,0,0.6);
+}
+
+.rotate:hover{
+    animation: rotate 1s ;
+}
+
+@keyframes rotate {
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+.heading{
+    background: linear-gradient(135deg, #153677, #4e085f);
+
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+
+.row {
+    text-align: center;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+.row input {
+    width: 70%;
+    padding: 10px 27px;
+    outline: none;
+    border:none;
+    background: transparent;
+    font-size: 20px;
+}
+
+
+.row input:focus{
+    background-color: rgb(179, 239, 250);
+    transition: 0.5s;
+}
+
+button {
+    font-size: 15px;
+    padding:13px 13px;
+    outline: none;
+    border: none;
+}
+
+button:hover{
+cursor: pointer;
+background-color: rgb(179, 239, 250);
+}
+
+.card h2 img {
+    margin-left: 100px;
+}
+
+#list-container {
+    padding: 5px;
+
+}
+
+ul li {
+    background-color: rgb(179, 239, 250);
+    list-style: none;
+    padding: 12px 50px;
+    position: relative; 
+    margin:5px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+ul li.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('img/radio.png');
+    top: 6px;
+    left: 8px;
+    transition: 0.5s;
+
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    transition: 1s;
+
+}
+
+ul li.checked::before{
+    background-image: url('img/check.png');
+    transition: 0.5s;
+
+}
+
+ul li span{
+    content: '';
+    height: 28px;
+    width: 25px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    font-size: 23px;
+    position: absolute;
+    background-position: center;
+    background-color: #153677;
+    background-size: cover;
+    top: 10px;
+    right: 20px;
+}
+
+ul li span:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: red;
+}
+
+@media screen and (max-width:768px) {
+    .card{
+        width: 80%;
+    }
+    button{
+        margin: 5px;
+    }
+}
