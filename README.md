@@ -1,2 +1,2 @@
-# Vikashsigh24-CognoRise-Infotech-To-Do-App
+# CognoRise-Infotech-To-Do-App
 Built using HTML, CSS, JavaScript
